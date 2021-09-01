@@ -22,8 +22,8 @@ class Movie{
 
   /*
   definisco 2 metodi:
-  uno per settare una descrizione della durata
-  uno per fare il get di questa informazione
+  - uno per settare una descrizione della durata
+  - uno per fare il get di questa informazione
   */
   public function setLength($duration){
     if($duration < 60){
@@ -60,7 +60,7 @@ $quasi_amici->setLength(150);
 $quasi_amici->genre = 'Commedia';
 $quasi_amici->plot = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 
-// stampo a schermo i tre "movie"
+// Stampo a schermo i tre "movie" e la durata dell'ultimo
 var_dump($it);
 var_dump($the_blind_side);
 var_dump($quasi_amici);
