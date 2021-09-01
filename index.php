@@ -11,7 +11,7 @@
 class Movie{
   // dichiaro variabili d'istanza
   public $title;
-  public $time;
+  public $length = 'Durata sconosciuta';
   public $genre;
   public $plot;
 
@@ -20,5 +20,26 @@ class Movie{
     $this->title = $_title;
   }
 
+  /*
+  definisco 2 metodi:
+  uno per settare una descrizione della durata
+  uno per fare il get di questa informazione
+  */
+  public function setLength($duration){
+    if($duration < 60){
+      $this->length = 'Cortometraggio';
+    }
+    elseif($duration > 60 && $duration < 120){
+      $this->length = 'Media durata';
+    }
+    else{
+      $this->length = 'Lunga durata';
+    }
+  }
+
+  public function getLength(){
+    return $this->length;
+  }
 
 }
+
