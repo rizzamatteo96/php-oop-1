@@ -43,3 +43,25 @@ class Movie{
 
 }
 
+// Creazione del primo "Movie"
+$it = new Movie('IT');
+$it->setLength(50);
+
+
+// Creazione del secondo "Movie"
+$the_blind_side = new Movie('The blind side');
+$the_blind_side->setLength(100);
+$the_blind_side->genre = 'Drammatico';
+
+
+// Creazione del terzo "Movie"
+$quasi_amici = new Movie('Quasi amici');
+$quasi_amici->setLength(150);
+$quasi_amici->genre = 'Commedia';
+$quasi_amici->plot = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+
+// stampo a schermo i tre "movie"
+var_dump($it);
+var_dump($the_blind_side);
+var_dump($quasi_amici);
+var_dump('Il film \'' . $quasi_amici->title . '\' è di ' . $quasi_amici->getLength());
